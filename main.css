@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;700&display=swap');
+
+:root {
+    /*===== COLORS */
+
+    /* Primary */
+    --light-cyan: hsl(193, 38%, 86%);
+    --neon-green: hsl(150, 100%, 66%);
+
+    /* Neutral */
+    --grayish-blue: hsl(217, 19%, 38%);
+    --dark-grayish-blue: hsl(217, 19%, 24%);
+    --dark-blue: hsl(218, 23%, 16%);
+
+    /*===== TYPOGRAPHY */
+    --main-font: 'Manrope', sans-serif;
+    --main-font-size: 13px;
+    --font-weight-bold: 700;
+    --font-weight-light: 300;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+main {
+
+    display: grid;
+    grid-template-columns: 100%;
+    align-items: center;
+    justify-items: center;
+    font-family: var(--main-font);
+    font-size: var(--main-font-size);
+    background-color: var(--dark-blue);
+    height: 100vh;
+}
+
+.error {
+    color: tomato;
+}
+
+.advice {
+    background-color: var(--dark-grayish-blue);
+    border-radius: 10px;
+    display: grid;
+    justify-items: center;
+    row-gap: 1.2rem;
+    position: relative;
+    width: 85%;
+    max-width: 360px;
+    margin-top: 3rem;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.advice__number {
+    color: var(--neon-green);
+    text-transform: uppercase;
+    font-size: .55rem;
+    font-weight: var(--font-weight-light);
+    letter-spacing: .2rem;
+}
+
+.advice__text {
+    font-size: 1.3rem;
+    color: var(--light-cyan);
+    font-weight: var(--font-weight-bold);
+}
+
+.advice__button {
+    width: 3.2rem;
+    height: 3.2rem;
+    background-color: var(--neon-green);
+    display: inline-flex;
+    justify-content: center;
+    position: absolute;
+    bottom: -1.6rem;
+    align-items: center;
+    border-radius: 50%;
+    transition: all .2s ease;
+}
+
+.advice__button:hover {
+    box-shadow: 0 0 30px var(--neon-green)
+}
+
+.advice__dividers {
+    margin-bottom: 1.2rem;
+}
+
+.advice__button-icon {
+    width: 1.2rem;
+    height: 1.2rem;
+}
+
+@media screen and (min-width: 375px) {
+    .advice {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .advice {
+        max-width: 545px;
+        padding: 3rem 2rem;
+        row-gap: 2.2rem;
+    }
+
+    .advice__number {
+        font-size: .70rem;
+    }
+
+    .advice__text {
+        font-size: 1.8rem;
+    }
+}
