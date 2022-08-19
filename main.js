@@ -5,22 +5,30 @@
 
     const getData = async () => {
 
+        $advice.insertAdjacentHTML("afterbegin", `
+                <div class="loading">
+                    <img src="images/spinning-circles.svg">
+                </div>            
+        `);
+
         try {
             const URL = "https://api.adviceslip.com/advice";
             let res = await fetch(URL);
             if(!res.ok) throw { status: res.status, statusText: res.statusText }
+            
+            if(res.ok) {
+                let $loading = $advice.firstElementChild;
+                $advice.removeChild($loading);
+            }
+
             let json = await res.json();
 
             let { slip } = json;
 
             $advice.insertAdjacentHTML("afterbegin", `
-                <h1 class="advice__text">${slip.advice}</h1>
-            `);
-
-            $advice.insertAdjacentHTML("afterbegin", `
                 <p class="advice__number">advice # ${slip.id}</p>
+                <h1 class="advice__text">${slip.advice}</h1>     
             `);
-
             
         }catch(err) {
             console.log(err);
@@ -31,6 +39,7 @@
                     ${msg}
                 </h1>
             `);
+
         }
      
     }

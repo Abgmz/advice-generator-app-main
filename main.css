@@ -45,6 +45,14 @@ main {
     height: 100vh;
 }
 
+.loading {
+    height: 5rem;
+    width: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .error {
     color: tomato;
 }

@@ -7,9 +7,9 @@ Hello There! 👋 Here is my solution for the [Advice generator app challenge on
 
 ### Links
 
-- Solution URL: [https://github.com/Abgmz/advice-generator-app-main](https://github.com/Abgmz/advice-generator-app-main)
-- Live Site URL: [https://advice-generator-a.netlify.app](https://advice-generator-a.netlify.app)
+- Solution URL: <a href="https://github.com/Abgmz/advice-generator-app-main" target="_blank">https://github.com/Abgmz/advice-generator-app-main</a>
 
+- Live Site URL: <a href="https://advice-generator-a.netlify.app" target="_blank">https://advice-generator-a.netlify.app</a>
 
 ### Built with
 
@@ -18,6 +18,6 @@ Hello There! 👋 Here is my solution for the [Advice generator app challenge on
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
-- Javascript
+- JavaScript
 - Async / Await
 - Fetch
